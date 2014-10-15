@@ -214,3 +214,46 @@ html.obama body {
     background-color:black;
     background-repeat: no-repeat;
 }
+
+html.louis body {
+	background:url("http://i.giphy.com/8mZK9do4ZvxQc.gif");
+	background-position:center;
+	background-size: 100%;
+    background-color:black;
+    background-repeat: no-repeat;
+}
+
+html.boring body {
+	background:url("http://i.giphy.com/jSxK33dwEMbkY.gif");
+	background-position:center;
+	background-size: 100%;
+    background-color:black;
+    background-repeat: no-repeat;
+}
+
+.reveal table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table tr:last-child td {
+    border-bottom: none;
+}
+
+.white-image {
+    width:120px;
+    background-color:white;
+    border-radius:10px;
+}
