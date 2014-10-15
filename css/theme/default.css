@@ -28,7 +28,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 36px;
   font-weight: normal;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   color: #eeeeee; }
 
 .reveal .footer-logos {
@@ -182,4 +182,35 @@ body {
 
 .reveal pre {
     width:100%;
+}
+
+.strong {
+    color:#17ff2e;
+}
+.yoobic .strong {
+    color: #3BCBAF;
+}
+html.money body {
+	background:url("https://cloud.githubusercontent.com/assets/4806944/4646184/1af61a92-5471-11e4-8f40-a2c69206b49c.gif");
+	background-position:center;
+	background-size: 100%;
+    background-color:black;
+    background-repeat: no-repeat;
+}
+
+
+html.facebook body {
+	background:url("http://cdn01.dailycaller.com/wp-content/uploads/2012/02/4689a98e5af648c09a8f2651b15993f1-e1330106890560.jpg");
+	background-position:center;
+	background-size: 100%;
+    background-color:black;
+    background-repeat: no-repeat;
+}
+
+html.obama body {
+	background:url("http://i.giphy.com/IMuqnp96sdhyE.gif");
+	background-position:center;
+	background-size: 100%;
+    background-color:black;
+    background-repeat: no-repeat;
 }
