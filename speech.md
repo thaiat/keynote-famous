@@ -49,4 +49,491 @@ So how does famous compare to other HTML5 / javascript frameworks.
 If you look at the left column you see like the old way of doing things. Sencha and Kendo would be example of full stack javascript framework where you get everything out of the box.
 The abstraction of the dom, the architecture with classes and components, and the presentation with UI theme that you have to love or be doomed.
 
-But with the avenement of npm and bower packages, the new way of doing things is that you can choose and cherry pick the framework for a specific task
+But with the avenement of npm and bower packages, the new way of doing things is that you can choose and cherry pick the librairies you need for very specific task
+
+So Famous is an open source web rendering engine
+It is very performance focus and let you code animation in a mucg more simplier way than using css
+It can be used to reproduce the native feeling your users expect from a mobile app
+and it is javascript.
+
+Now that you know what is famous you should probably know also where is famous.
+They are located in San Fransisco, they shared untill a few months ago the same building as Firebase. And now that firebase as been aquired by google, the only thing really missing in the 
+google stack is a nice ui framework so maybe they are going to follow the same path.
+The nice thing about San Fransisco is that it is really a fun city to go. So if you are looking for a destination for you next holidays you should consider it.
+Because not only like you can do lots of cool stuff, like kite surfing under the golden gate bridge and do some horse back riding on the beautilful beaches, you can also pay a visit to famous.
+It is called famous Lab. The famous team will actually welcome you in their offices and you can spend a week or 2 sitting there with the developpers and get some help from the very people
+writing the framework. That's awesome. Plus you feel like kind of being inside the silicon valley TV show.
+
+There are really 2 concepts to understant when you start working with famous
+The first one is the render tree.
+So instead of giving you a direct interaction with the dom, famous holds an in memory tree view of nodes. Some of the node are visible and they are called renderable nodes. 
+The most common renderable node is a Surface. Some of the nodes are invisible, they are  either placeholders  (their purpose is to group togeter other sub nodes) or they are modifiers
+and their purpose is to animate or apply graphical tranformation to the underneath branch (translating , scaling, , rotating, changing the opacity etc..) 
+
+To give you a clearer picture of the render tree let's take an example of a person. A person has a body, a head , arms, 
+I can decide to animate the root node, or only a sub node, or both.
+That's a very common technique that almost every 3D game studio is using.
+
+The second tehcnical magic of famous is that it uses css3 Matric3D, and requestAnimationFrame to get 3D at 60 FPS.
+As famous interaction layer is the render tree, it can produce how of it , HTML, WEBGL
+
+So when we were at the famous Lab, we first tried plain famous and it was kinda of hard, and then our second attempt was to use famous-angular.
+
+Demo:
+Codio: we are going to use an awesome html5 editor. It's called codio. It s not onlhy a very fast editor with in line linting, but it comes also with a box and a terminal so you can play
+around and install all kind of stuff without polluting your laptop. Plus you can access from where you want so it s very easy to switch laptopt and start over where you left.
+To ease the work with famous I have developped a yemoan generator that is going to do all the hard work for you. 
+It will scaffold the application using angular best pratcices, but together linting, unit testing, e2e testing.
+It has a very clean architecture model as it using browserify under the hoods.
+Lets see how you install it : 
+open new project famous-flickr-1
+nvm install 0.10.30
+npm install -g generator-angular-famous-ionic
+
+opne a new project browserify-1
+nvm install 0.10.30
+npm install -g browserify
+touch foo.js 
+touch index.js
+touch index.html
+foo calculate gamma fs   var html = fs.readFileSync(__dirname + '/robot.html', 'utf8');
+transforms cssify brfs yamlify
+
+
+come back to installed project famous-flickr-2
+startup.sh, prepublish.sh, autosave false
+install service photos
+install controller home
+modify main.scss
+```css
+
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+body {
+    background-color:#000;
+}
+
+html, body , * {
+    font-family:'verdana';
+}
+
+
+.full-screen {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.full-height,
+.full-height .fa-surface {
+    height: 100%
+}
+
+
+.full-width,
+.full-width .fa-surface {
+    width: 100%
+}
+
+.full-size {
+    height: 100%;
+     width: 100%;
+}
+
+
+.photo0 {
+   padding-top:2px;
+   padding-left:2px;
+   padding-right:1px;
+}
+
+.photo1 {
+   padding-top:2px;
+   padding-left:1px;
+   padding-right:1px;
+}
+
+.photo2 {
+   padding-top:2px;
+   padding-left:1px;
+   padding-right:2px;
+}
+
+
+.circle{
+    border-radius:50%;
+}
+
+.text-small{
+ font-size:13px;
+}
+
+.text-center {
+    text-align:center;
+}
+
+.white {
+    color:#FFFFFF;
+}
+
+.border-bottom{
+    border-bottom:2px solid white;
+}
+
+.padding{
+    padding:5px;
+}
+
+#circleSvgContainer{
+    width:100%;
+    height:100%;
+}
+
+#circleSvgContainer > svg {
+    width: 100%;
+    display: block;
+}
+
+
+
+```
+
+Add the dynamic sass
+```
+@mixin text-center-x {
+    @for $i from 1 through 10  {
+        .text-center-#{$i*10} {
+            text-align:center;
+            line-height:$i*10px;
+        }
+    }
+}
+@include text-center-x;
+```
+
+wrap ui-view with fa-app in index.html
+```html
+<fa-app class="full-screen">
+        <ui-view></ui-view>
+    </fa-app>
+```
+
+bind directive and home controller + controllerAs : 'vm'
+change get function of photos with 
+```js
+var generate = function(width, height, number, groupOf) {
+            number = number || 1;
+            groupOf = groupOf || 1;
+            var photos = _.chain(_.range(number))
+                .map(function(index) {
+                    return 'http://lorempixel.com/' + Math.round(width) + '/' + Math.round(height) + '/?i=' + randomstring.generate(7);
+                })
+                .groupBy(function(value, i) {
+                    return Math.floor(i / groupOf);
+                })
+                .value();
+
+            return photos;
+        };
+
+        var getStyle = function(photoUrl) {
+            return {
+                'background-image': 'url(\'' + photoUrl + '\')',
+                'background-size': 'cover',
+                'background-repeat': 'no-repeat',
+                'background-position': 'center',
+                'width': '100%',
+                'height': '100%'
+            };
+        };
+```
+In the home controller define
+```js
+vm.viewSize = {
+            width: $window.innerWidth,
+            height: $window.innerHeight
+        };
+
+        vm.userName = 'john doe';
+
+        vm.photos = photos.generate(2 * vm.viewSize.width / 3, 2 * vm.viewSize.width / 3, 50, 3);
+        vm.photoMain = photos.generate(vm.viewSize.width * 2, 150 * 2)[0][0];
+        vm.photoProfile = photos.generate(100, 100)[0][0];
+
+        vm.getPhotoStyle = photos.getStyle;
+
+```
+
+home.html
+```html
+<fa-view>
+    <fa-scroll-view id="scrollView" fa-options="{direction: 1, edgeGrip:1}">
+    </fa-scroll-view>
+</fa-view>
+```
+
+change to single row
+```html
+<fa-surface class="full-height" ng-repeat="photo in vm.photos[0]" >
+   <div ng-style="vm.getPhotoStyle(photo)"></div>
+</fa-surface>
+````
+Add eventHandler to home.js (inject $famous)
+```js
+        var EventHandler = $famous['famous/core/EventHandler'];
+        vm.eventHandler = new EventHandler();
+
+```
+```html
+fa-pipe-to="vm.eventHandler"
+fa-pipe-from="vm.eventHandler" 
+````
+
+change to grid
+```
+<fa-view>
+    <fa-scroll-view id="scrollView" fa-pipe-from="vm.eventHandler" fa-options="{direction: 1, edgeGrip:1}">
+        <fa-view ng-repeat="row in vm.photos track by $index" fa-size="[undefined, vm.viewSize.width/3]" fa-index="$index">
+            <fa-modifier>
+                <fa-grid-layout fa-options="{dimensions :[3,1]}">
+                    <fa-modifier ng-repeat="photo in row" fa-size="[vm.viewSize.width/3, vm.viewSize.width/3]">
+                        <fa-surface fa-pipe-to="vm.eventHandler" fa-background-color="'black'" class="full-height">
+                            <div class="full-height photo{{$index}}">
+                                <div class="full-height" ng-style="vm.getPhotoStyle(photo)"></div>
+                            </div>
+                        </fa-surface>
+                    </fa-modifier>
+                </fa-grid-layout>
+            </fa-modifier>
+        </fa-view>
+    </fa-scroll-view>
+</fa-view>
+```
+
+
+Footer:
+```html
+    <fa-modifier fa-size="[undefined, 40]" fa-align="[0,1]" fa-origin="[0,1]">
+        <fa-modifier fa-opacity="0.6">
+            <fa-surface fa-background-color="'black'" ></fa-surface>
+        </fa-modifier>
+      </fa-modiifer>  
+```
+
+and then
+```
+<fa-grid-layout fa-options="{dimensions: [3,1]}">
+
+            <fa-surface>
+                <div class="text-center-40">
+                    <i class="fa fa-photo"></i>
+                </div>
+            </fa-surface>
+
+            <fa-surface>
+                <div class="text-center-50">
+                    <i class="fa fa-camera fa-2x"></i>
+                </div>
+            </fa-surface>
+
+            <fa-surface>
+                <div class="text-center-40">
+                    <i class="fa fa-user"></i>
+                </div>
+            </fa-surface>
+
+        </fa-grid-layout>
+```
+
+
+Header:
+
+```html
+  <fa-view>
+            <fa-modifier fa-size="[undefined, 150]">
+                <fa-surface></fa-surface>
+            </fa-modifier>
+        </fa-view>
+```
+replace surface with image
+```html
+ <fa-modifier fa-align="[0.5,0]" fa-origin="[0.5,0]" ffa-size="[vm.viewSize.width+vm.getOverpull(), 165+vm.getOverpull()]" ffa-translate="[0, -15-vm.getOverpull()]" fa-opacity="0.8">
+                    <fa-surface class="full-height" fa-z-index="2" fa-pipe-to="vm.eventHandler">
+                        <div id="mainPhoto" class="full-height" ng-style="vm.getPhotoStyle(vm.photoMain)"></div>
+                    </fa-surface>
+                </fa-modifier>
+```
+
+under surface :
+```html
+<fa-modifier ffa-translate="[0,-vm.getOverpull()/2]">
+  <fa-modifier fa-size="[80,80]" fa-align="[0.5,0]" fa-origin="[0.5,0]" fa-translate="[0,5]">
+                    <fa-surface class="padding circle full-height" fa-z-index="4" fa-pipe-to="vm.eventHandler">
+                        <div class="circle full-height" ng-style="vm.getPhotoStyle(vm.photoProfile)"></div>
+                    </fa-surface>
+                </fa-modifier>
+
+
+                <fa-modifier fa-size="[undefined,30]" fa-align="[0.5,0]" fa-origin="[0.5,0]" fa-translate="[0,85]" >
+                    <fa-surface class="white text-center text-small full-height" fa-z-index="4" fa-pipe-to="vm.eventHandler">
+                        <div>{{vm.userName}}</div>
+                    </fa-surface>
+                </fa-modifier>
+ </fa-modifier>
+
+```
+
+under surface :
+
+```html
+  <fa-modifier fa-size="[undefined, 40]" fa-align="[0,1]" fa-origin="[0,1]" fa-translate=[0,0,10]>
+                    <fa-modifier fa-opacity="0.6">
+                        <fa-surface fa-background-color="'black'"></fa-surface>
+                    </fa-modifier>
+
+
+                    <fa-grid-layout fa-options="{dimensions: [3,1]}">
+
+                        <fa-surface>
+                            <div class="text-center-40">Photo</div>
+                        </fa-surface>
+
+
+                        <fa-surface>
+                            <div class="text-center-40 border-bottom">Albums</div>
+                        </fa-surface>
+
+
+                        <fa-surface>
+                            <div class="text-center-40">Groups</div>
+                        </fa-surface>
+
+
+                    </fa-grid-layout>
+
+                </fa-modifier>
+
+```
+
+
+
+
+Add animation function to home.js
+```js
+ var getScrollView = function() {
+            if(!_scrollview) {
+                return _scrollview = $famous.find('#scrollView')[0].renderNode;
+            }
+            return _scrollview;
+        };
+
+        vm.getOverpull = function() {
+            return -Math.min(0, getScrollView().getAbsolutePosition());
+        };
+
+        vm.getToolbarTranslate = function() {
+            var pos = getScrollView().getAbsolutePosition();
+            return pos > 110 ? pos - 110 : 0;
+        };
+```
+deactivate ffa one by one
+
+add to the top modifier
+```html
+fa-translate="[0, vm.getToolbarTranslate()]"
+```
+
+
+Blur home.js
+```js
+ var Timer = $famous['famous/utilities/Timer'];
+        Timer.every(function() {
+            var pos = vm.getOverpull();
+            $famous.find('#mainPhoto')[0].renderNode.setProperties({
+                webkitFilter: getBlur(pos)
+            });
+
+        }, 1);
+
+        function getBlur(pos) {
+
+            var blur = pos > 100 ? Math.min(Math.round(pos / 15), 10) : 0;
+            return 'blur(' + blur + 'px)';
+        }
+
+```
+
+
+Install ProgressBar.js
+```
+bower install progressbar.js
+```js
+"progressbar": "./bower_components/progressbar.js/dist/progressbar.js"
+
+// and 
+
+"progressbar": {
+            "exports": "ProgressBar"
+        },
+
+
+```
+home.html before photo Profile image modifier
+```html
+ <fa-modifier fa-size="[80,80]" fa-align="[0.5,0]" fa-origin="[0.5,0]" fa-translate="[0,5]">
+                        <fa-surface class="circle full-height" fa-z-index="4" fa-pipe-to="vm.eventHandler">
+                            <div id="circleSvgContainer"></div>
+                        </fa-surface>
+                    </fa-modifier>
+
+```
+
+home.js
+```js
+var ProgressBar = require('progressbar');
+
+
+var fillCircle = function(value) {
+            if(vm.circle) {
+                vm.circle.set(value);
+                return;
+            }
+            vm.circle = new ProgressBar.Circle($window.document.getElementById('circleSvgContainer'), {
+                color: '#3498DB',
+                strokeWidth: 10
+            });
+        };
+        
+```
+
+
+in the timer
+```js
+fillCircle(Math.min(1, pos / 110));
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
