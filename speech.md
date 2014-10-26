@@ -6,10 +6,15 @@ Short cuts:
 
 ## Slide 1
 Hello everyone, I'm very glad to be here, and again welcome to this first famo.us meetup in TLV.
-I must admit that it is also my very first meetup as a presenter, so I'm double excited.
+
 
 Today I want to show you some cool stuff about famous and especially famous angular, but before we begin, I have a couple of announcements
-First I have put together a meetup a another kind. It's called Russian Combat, and it s a form a self defense martial art similar to Krav Maga. It is very effective, and we have the chance
+First I must admit that it is also my very first meetup as a presenter, so I'm very excited. We'll be writing live code at the end of the presentation so i count
+on you to be my human debugger.
+I want this session to be as interactive as possible so if you have any questions feel free to interrupt me.
+
+Second I'll be presenting a meetup on ionic on november 5th. So if you want to compare ionic and famous capabilities you should register and come.
+Third ans last annoucement, I have put together a meetup a another kind. It's called Russian Combat, and it s a form a self defense martial art similar to Krav Maga. It is very effective, and we have the chance
 to have in Israel one of the best expert. So whenever you have an issue you can't solve with your code, it's a very effective way to release the frustration and sweat a bit.
 Get in touch with me and i'll give you all the details.
 
@@ -371,7 +376,7 @@ vm.viewSize = {
             height: $window.innerHeight
         };
 
-        vm.userName = 'john doe';
+        vm.userName = 'John Doe';
 
         vm.photos = photos.generate(2 * vm.viewSize.width / 3, 2 * vm.viewSize.width / 3, 30, 3);
         vm.photoMain = photos.generate(vm.viewSize.width * 2, 150 * 2)[0][0];
