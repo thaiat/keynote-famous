@@ -9,80 +9,161 @@ Hello everyone, I'm very glad to be here, and again welcome to this first famo.u
 
 
 Today I want to show you some cool stuff about famous and especially famous angular, but before we begin, I have a couple of announcements
-First I must admit that it is also my very first meetup as a presenter, so I'm very excited. We'll be writing live code at the end of the presentation so i count
+
+First I must admit that it is also my very first meetup as a presenter, so I'm very excited. 
+
+We'll be writing live code at the end of the presentation so i count
 on you to be my human debugger.
+
 I want this session to be as interactive as possible so if you have any questions feel free to interrupt me.
 
-Second I'll be presenting a meetup on ionic on november 5th. So if you want to compare ionic and famous capabilities you should register and come.
-Third ans last annoucement, I have put together a meetup a another kind. It's called Russian Combat, and it s a form a self defense martial art similar to Krav Maga. It is very effective, and we have the chance
-to have in Israel one of the best expert. So whenever you have an issue you can't solve with your code, it's a very effective way to release the frustration and sweat a bit.
+Second I'll be presenting a meetup on ionic on november 5th. 
+So if you want to compare ionic and famous capabilities you should register and come.
+
+## Slide 2
+Third and last annoucement, I have put together a meetup a another kind. 
+
+It's called Russian Combat, and it s a form a self defense martial art similar to Krav Maga. 
+It is very effective, and we have the chance
+to have in Israel one of the best expert. The trainer is a 6th dan in Karate Kyokushinkai. 
+For those who know a bit about karate kyokushinkai is probably the most effective style of karate
+So whenever you have an issue you can't solve with your code, it's a very effective way to release the frustration and sweat a bit.
 Get in touch with me and i'll give you all the details.
 
 So let's talk about famous.
 
-So my name is Avi, you can see some of my details here. I've been an Entrepreneur slash CTO for the past 15 years. 3 years ago I sold my last company called Vizelia to one og the giant actor in the Green: Schneider Electric. 
-Vizelia was developping a dashboard HTML5 platform for monitoring the Energy consumption in big buildings. And we used Sencha to build it.
-How many of you are working in a startup ? Well you'll agree with me that one of the dream you have when you start a new company, like in the back of you're mind, you have is that it would be so cool to eventually sell it. But the question you never asked yourself 
-is what do you do after you sold it. Because you know you kinda lost your baby...
-So today I have the answer. In order to battle to post aquisition depression phase, the best thing to do is to start from the beginning.
+## Slide 3
+
+So my name is Avi, and this is Gilles my little brother.
+
+## Slide 4
+We've been Entrepreneurs slash CTO slash R&D for the past 15 years. 
+Our first company was called Vizelia. We developped a HTML5 dashboard for monitoring the Energy consumption in big buildings.
+And we used Sencha to build it. 
+3 years ago we got acquired by one of the giant actor in the Green IT Field: Schneider Electric. 
+ 
+How many of you are working in a startup ? 
+Quite a few actually
+
+Well you'll agree with me that one of the dream you have when you start a new company, like in the back of you're mind, you have is that it would be so cool to eventually sell it. 
+
+But the question you never asked yourself 
+is what do you do after you sold your baby.
+So today I have the answer. 
+
+## Slide 5
+In order to battle to post aquisition depression phase, the best thing to do is to start from the beginning.
 And that's exactly what we did. 
 
-We started a new company called Yoobic about 1 year ago.
-The goal of Yoobic is to provide to corporate brand companies a mobile app, so they can ask the crowd to retreive for them field data. Like how are they doing in physical shops.
-We call the mission Quests, and users can dedicated 10 mins of their time to take a survey while their are in the stores, with a few simple questions, so that the brand can get instant
-feedback. And they get paid for that around 5 to 10 euros
-The product was built using Ionic and angular, and we are in the process or re writing it with famous.
+## Slide 6
+
+We started a new company called Yoobic about 1 year ago. You can think of Yoobic as the task rabbit for the Enterprise.
+Our customers are mostly brand company, that need to get data at the lowest possible cost.
+The goal of Yoobic is to provide to corporate brand companies a mobile app, so they can ask the crowd to retreive for them field data. 
+Like how are they doing in physical shops.
+
+## Slide 7
+We call the mission Quests, and crowd users can dedicated 10 mins of their time to take a survey while their are in the stores, and fill in a few simple questions, take a few pictures of the display,  
+so that the brand can get instant feedback feedback. And they get paid for that around 5 to 10 euros
+The product was built using Ionic and angular, and we are in the process or re writing it with famous. 
+
+We went live a couple of weeks ago after some pilots with real customers
+
+We already have about 2000 users, 20 customers, and the last bunch of missions was completed in about 48 hours. Which is amazing.
+
+## Slide 8
 Also we are activly recruting so if you are looking for new opportunities do not hesitate to get in touch with me.
 
+## Slide 9
+
 So what is the situation today if you wanna build a mobile app. You have several platforms, and one of your first choice could be to develop natively for those platforms.
-And actually a lot of companies are still doing that. But as a startup you have limited resources, and you want to got live as soon as possible.
-So the question is "is there a better way to achieve that"? And actually building an hybrid application seems like a very good fit. Because you reuse the same base code across all of the devices
+And actually a lot of companies are still doing that. 
+But as a startup you have limited resources, and you want to got live as soon as possible.
+So the question is "is there a better way to achieve that"? 
+And actually building an hybrid application seems like a very good fit. Because you reuse the same base code across all of the devices
 So it is cheaper and both faster to develop.
 
-But there is still some confusion about hybrid apps.
+But there are still some confusions about hybrid apps.
+
+## Slide 10
+
 In 2012, Mark Zuckerberg declared that he should have bet on HTML5 over native.
 
-And i remember that i was kind of chocking statement... It was about 5 or 6 years that i was developping a HTML 5 application (for the browser not mobile of course). And it was a lot more effective than the desktop application that we add before.
+And i remember exaclty reading this chocking statement... 
+It was about 5 or 6 years that we were developping a HTML 5 application (for the browser not mobile of course). 
+And it was a lot more effective than the desktop application that we add before.
 And in many aspect it reminds me of the debate between web app and desktop app like in 2000. Only in a very specific situation you should choose to go with desktop.
 So when i read the statement my first reaction was a bit like that.
-and then like that.
 
+## Slide 11
+and then like that.
+## Slide 12
+
+## Slide 13
 So there is a lot of controversy about what exacly Mark Zuckerberg meant. And you should be confident that the gap between native and mobile is rapidly decreasing. 
 and famous help us do a few more steps in that direction.
 
+## Slide 14
 So how does famous compare to other HTML5 / javascript frameworks.
 If you look at the left column you see like the old way of doing things. Sencha and Kendo would be example of full stack javascript framework where you get everything out of the box.
 The abstraction of the dom, the architecture with classes and components, and the presentation with UI theme that you have to love or be doomed.
 
-But with the avenement of npm and bower packages, the new way of doing things is that you can choose and cherry pick the librairies you need for very specific task
+But with the avenement of npm and bower packages, the new way of doing things is that you can choose and cherry pick the librairies you need for very specific tasks
 
+## Slide 15
 So Famous is an open source web rendering engine
-It is very performance focus and let you code animation in a mucg more simplier way than using css
+It is very performance focus and let you code animation in a much more simplier way than using css
 It can be used to reproduce the native feeling your users expect from a mobile app
 and it is javascript.
 
+## Slide 16
 Now that you know what is famous you should probably know also where is famous.
-They are located in San Fransisco, they shared untill a few months ago the same building as Firebase. And now that firebase as been aquired by google, the only thing really missing in the 
-google stack is a nice ui framework so maybe they are going to follow the same path.
-The nice thing about San Fransisco is that it is really a fun city to go. So if you are looking for a destination for you next holidays you should consider it.
-Because not only like you can do lots of cool stuff, like kite surfing under the golden gate bridge and do some horse back riding on the beautilful beaches, you can also pay a visit to famous.
-It is called famous Lab. The famous team will actually welcome you in their offices and you can spend a week or 2 sitting there with the developpers and get some help from the very people
-writing the framework. That's awesome. Plus you feel like kind of being inside the silicon valley TV show.
+They are located in San Fransisco, they shared untill a few months ago the same building as Firebase. 
+And now that firebase as been aquired by google, maybe this gives us an hint about what is going to be their next move
 
+The nice thing about San Fransisco is that it is really a fun city to go. 
+If you are looking for a destination for you next holidays you should consider it.
+Because not only like you can do lots of cool stuff, like kite surfing under the golden gate bridge and do some horse back riding on the beautilful beaches, 
+you can also pay a visit to famous.
+It is called famous Lab. The famous team will actually welcome you in their offices and 
+
+you can spend a week or 2 sitting there with the developpers and get some help from the very people
+writing the framework. 
+
+That's awesome. Plus you feel like kind of being inside the silicon valley TV show.
+
+
+## Slide 17
 There are really 2 concepts to understant when you start working with famous
 The first one is the render tree.
-So instead of giving you a direct interaction with the dom, famous holds an in memory tree view of nodes. Some of the node are visible and they are called renderable nodes. 
-The most common renderable node is a Surface. Some of the nodes are invisible, they are  either placeholders  (their purpose is to group togeter other sub nodes) or they are modifiers
+So instead of giving you a direct interaction with the dom, famous holds an in memory tree view of nodes. 
+Some of the node are visible and they are called renderable nodes. 
+The most common renderable node is a Surface. 
+Some of the nodes are invisible, they are  either placeholders  (their purpose is to group togeter other sub nodes) or they are modifiers
 and their purpose is to animate or apply graphical tranformation to the underneath branch (translating , scaling, , rotating, changing the opacity etc..) 
 
 To give you a clearer picture of the render tree let's take an example of a person. A person has a body, a head , arms, 
 I can decide to animate the root node, or only a sub node, or both.
 That's a very common technique that almost every 3D game studio is using.
 
-The second tehcnical magic of famous is that it uses css3 Matric3D, and requestAnimationFrame to get 3D at 60 FPS.
-As famous interaction layer is the render tree, it can produce how of it , HTML, WEBGL
 
+
+## Slide 18
+The second tehcnical magic of famous is that it uses css3 Matric3D, and requestAnimationFrame to get 3D at 60 FPS.
+
+As famous abstract away the rendering and give you an interaction layer that is the render tree, it can produce how of it , HTML, WEBGL
+
+## Slide 19
 So when we were at the famous Lab, we first tried plain famous and it was kinda of hard, and then our second attempt was to use famous-angular.
+And it was much easier, because instead of trying to do everything with famous, we could rely an angular to do some of its magic, 
+and we could express the render tree as a template
+
+## Slide 20
+3 way to get started with famous-angular
+
+
+
+
 
 ## Demo
 ### Codio
@@ -108,11 +189,57 @@ While this is installing demonstrate how browserify works
 * open a new project `browserify-1`
 * `nvm install 0.10.30`
 * `npm install -g browserify`
-* touch foo.js 
-* touch index.js
-* touch index.html
-* foo calculate gamma fs   var html = fs.readFileSync(__dirname + '/robot.html', 'utf8');
-* transforms cssify brfs yamlify
+* `touch foo.js`
+```javascript
+exports.magic=function(value){
+return 2*value;
+};
+```
+* `touch index.js`
+```javascript
+var foo=require('./foo.js');
+var res= foo.magic(20);
+console.log(res);
+```
+* `node index.js`
+* `npm install -g browserify`
+* `touch index.html`
+! tab
+```html
+<body>
+<h1>Browserify works</h1>
+<script scr="bundle.js"></script>
+</body>
+```
+* split the screen and display the html
+* go back to index.js
+```javascript
+var node=document.createTextNode(res);
+document.body.appendChild(node);
+```
+* `browserify index.js -o bundle.js`
+* go back to foo.js 
+```javascript
+var gamma=require('gamma');
+exports.magic=function(value){
+return gamma(value);
+}
+```
+* terminal : `npm install gamma`
+* `browserify index.js -o bundle.js`
+
+
+* terminal : `npm install cssify`
+* `touch main.css`
+```css
+body {
+background-color:red;
+color:white;
+}
+```
+* go back to index.js and add first line:
+`require('./main.css')`
+* `browserify index.js  -t cssify -o bundle.js`
 
 
 come back to installed project famous-flickr-2
@@ -120,7 +247,6 @@ come back to installed project famous-flickr-2
 * bash ./startup.sh 
 * bash ./bin/prepublish.sh
 * autosave false
-* fix .tern-project
 * change port to 5000
 * prepare 2 windows
 * `gulp browsersync'
@@ -146,12 +272,16 @@ run gulp karma
 * install service photos `yo angular-famous-ionic:service common photos`
 * install famous helper `yo angular-famous-ionic:service common famousHelper`
 * install controller home `yo angular-famous-ionic:controller common home`
-* modify meta of index.html
+* modify head of index.html
 ```html
+    <head>
+    <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi" >
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+    <title>Flickr</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
 ```
 * modify `main.scss`
 
@@ -242,10 +372,6 @@ html, body , * {
     display: block;
 }
 
-.blurred {
-    filter:blur(20px);
-}
-
 ```
 
 Add the dynamic sass
@@ -266,6 +392,13 @@ wrap `ui-view` with `fa-app` in `index.html`
 <fa-app class="full-screen">
     <ui-view></ui-view>
 </fa-app>
+```
+
+
+bind directive and home controller + controllerAs : 'vm' index.js
+```js
+controller: fullname + '.home',
+controllerAs: 'vm'
 ```
 
 
@@ -294,11 +427,6 @@ home.html
 ```
 
 
-bind directive and home controller + controllerAs : 'vm' index.js
-```js
-controller: fullname + '.home',
-controllerAs: 'vm'
-```
 
 Install npm packages
 ```
@@ -381,11 +509,11 @@ vm.viewSize = {
             width: $window.innerWidth,
             height: $window.innerHeight
         };
-
+        vm.headerHeight = 200;
         vm.userName = 'John Doe';
 
         vm.photos = photos.generate(2 * vm.viewSize.width / 3, 2 * vm.viewSize.width / 3, 30, 3);
-        vm.photoMain = photos.generate(vm.viewSize.width * 2, 150 * 2)[0][0];
+        vm.photoMain = photos.generate(vm.viewSize.width * 2, vm.headerHeight * 2)[0][0];
         vm.photoProfile = photos.generate(100, 100)[0][0];
 
         vm.getPhotoStyle = photos.getStyle;
@@ -487,7 +615,7 @@ Header inside the srollview:
 ```html
 <!-- HEADER -->
 <fa-view>
-    <fa-modifier fa-size="[undefined, 150]">
+    <fa-modifier fa-size="[undefined, vm.headerHeight]">
         <fa-surface></fa-surface>
         <!-- MAIN PHOTO -->
         <!-- PROFILE PICTURE AND TEXT  -->
@@ -498,7 +626,7 @@ Header inside the srollview:
 replace fa-surface tag with (this create the upper image)
 ```html
 <!-- MAIN PHOTO -->
-<fa-modifier fa-align="[0.5,0]" fa-origin="[0.5,0]" ffa-size="[vm.viewSize.width+vm.getOverpull(), 165+vm.getOverpull()]" ffa-translate="[0, -15-vm.getOverpull()]" fa-opacity="1">
+<fa-modifier fa-align="[0.5,0]" fa-origin="[0.5,0]" ffa-size="[vm.viewSize.width+vm.getOverpull(), vm.headerHeight+15+vm.getOverpull()]" ffa-translate="[0, -15-vm.getOverpull()]" fa-opacity="1">
     <fa-surface class="full-height" fa-z-index="2" fa-pipe-to="vm.eventHandler">
         <div id="mainPhoto" class="full-height" ng-style="vm.getPhotoStyle(vm.photoMain)"></div>
     </fa-surface>
@@ -508,18 +636,19 @@ replace fa-surface tag with (this create the upper image)
 under parent modifier of surface :
 ```html
 <!-- PROFILE PICTURE AND TEXT -->
-<fa-modifier ffa-translate="[0,-vm.getOverpull()/2]">
+<fa-modifier fa-align="[0.5,0.5]"  fa-origin="[0.5,0.5]" fa-size="[200,110]" ffa-translate="[0,-20-vm.getOverpull()/2]">
     <!-- PROFILE CIRCLE -->
-    <fa-modifier fa-size="[80,80]" fa-align="[0.5,0]" fa-origin="[0.5,0]" fa-translate="[0,5]">
-        <fa-surface class="padding circle full-height" fa-z-index="4" fa-pipe-to="vm.eventHandler">
-            <div class="circle full-height" ng-style="vm.getPhotoStyle(vm.photoProfile)"></div>
-        </fa-surface>
-    </fa-modifier>
-    <fa-modifier fa-size="[undefined,30]" fa-align="[0.5,0]" fa-origin="[0.5,0]" fa-translate="[0,85]" >
-        <fa-surface class="white text-center text-small full-height" fa-z-index="4" fa-pipe-to="vm.eventHandler">
-            <div>{{vm.userName}}</div>
-        </fa-surface>
-    </fa-modifier>
+     <fa-modifier fa-size="[80,80]" fa-align="[0.5,0]" fa-origin="[0.5,0]">
+                        <fa-surface class="full-height" fa-z-index="4" fa-pipe-to="vm.eventHandler">
+                            <div class="circle full-height" ng-style="vm.getPhotoStyle(vm.photoProfile)">
+                            </div>
+                        </fa-surface>
+                    </fa-modifier>
+                    <fa-modifier fa-size="[undefined,20]" fa-align="[0.5,1]" fa-origin="[0.5,1]">
+                        <fa-surface class="white text-center text-small full-height" fa-z-index="4" fa-pipe-to="vm.eventHandler">
+                            <div>{{vm.userName}}</div>
+                        </fa-surface>
+                    </fa-modifier>
 </fa-modifier>
 
 ```
@@ -568,7 +697,7 @@ vm.getOverpull = function() {
 
 vm.getToolbarTranslate = function() {
     var pos = getScrollView().getAbsolutePosition();
-    return pos > 110 ? pos - 110 : 0;
+     return pos > (vm.headerHeight - 60) ? pos - (vm.headerHeight - 60) : 0;
 };
         
        
@@ -624,7 +753,7 @@ npm install --save progressbar.js shifty
 home.html before photo Profile image modifier
 ```html
 <!-- PROFILE CIRCLE -->
- <fa-modifier fa-size="[80,80]" fa-align="[0.5,0]" fa-origin="[0.5,0]" fa-translate="[0,5]">
+                    <fa-modifier fa-size="[88,88]" fa-align="[0.5,0]" fa-origin="[0.5,0]" fa-translate="[0, -4]">
                         <fa-surface class="circle full-height" fa-z-index="4" fa-pipe-to="vm.eventHandler">
                             <div id="circleSvgContainer"></div>
                         </fa-surface>
@@ -644,7 +773,8 @@ var fillCircle = function(value) {
             }
             vm.circle = new ProgressBar.Circle($window.document.getElementById('circleSvgContainer'), {
                 color: '#3498DB',
-                strokeWidth: 10
+                strokeWidth: 4,
+                fill:'#FFFFFF'
             });
         };
         
