@@ -146,7 +146,13 @@ run gulp karma
 * install service photos `yo angular-famous-ionic:service common photos`
 * install famous helper `yo angular-famous-ionic:service common famousHelper`
 * install controller home `yo angular-famous-ionic:controller common home`
-
+* modify meta of index.html
+```html
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi" >
+```
 * modify `main.scss`
 
 ```css
@@ -268,18 +274,18 @@ home.html
 ```html 
 <fa-view>
     <fa-surface>
+        <label for="">translateX</label>
+        <br>
+        <input type="text" ng-model="vm.translateX" ng-init="vm.translateX=100">
+        <br>
         <label for="">translateY</label>
         <br>
-        <input type="text" ng-model="vm.translateY" ng-init="vm.translateY=200">
-        <br>
-        <label for="">rotateZ</label>
-        <br>
-        <input type="text" ng-model="vm.rotateZ" ng-init="vm.rotateZ=1">
+        <input type="text" ng-model="vm.translateY" ng-init="vm.translateY=100">
     </fa-surface>
 
 
-    <fa-modifier fa-align="[0.5,0.5]" fa-origin="[0.5,0.5]" fa-translate="[0,vm.translateY]">
-        <fa-modifier fa-rotate-z="vm.rotateZ">
+    <fa-modifier fa-align="[0.5,0.5]" fa-origin="[0.5,0.5]" fa-translate="[vm.translateX,0]">
+        <fa-modifier fa-translate="[0,vm.translateY]">
             <fa-surface fa-size="[100,100]" fa-background-color="'red'"></fa-surface>
         </fa-modifier>
     </fa-modifier>
@@ -492,7 +498,7 @@ Header inside the srollview:
 replace fa-surface tag with (this create the upper image)
 ```html
 <!-- MAIN PHOTO -->
-<fa-modifier fa-align="[0.5,0]" fa-origin="[0.5,0]" ffa-size="[vm.viewSize.width+vm.getOverpull(), 165+vm.getOverpull()]" ffa-translate="[0, -15-vm.getOverpull()]" fa-opacity="0.8">
+<fa-modifier fa-align="[0.5,0]" fa-origin="[0.5,0]" ffa-size="[vm.viewSize.width+vm.getOverpull(), 165+vm.getOverpull()]" ffa-translate="[0, -15-vm.getOverpull()]" fa-opacity="1">
     <fa-surface class="full-height" fa-z-index="2" fa-pipe-to="vm.eventHandler">
         <div id="mainPhoto" class="full-height" ng-style="vm.getPhotoStyle(vm.photoMain)"></div>
     </fa-surface>
