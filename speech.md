@@ -662,13 +662,13 @@ under surface :
         <fa-surface fa-background-color="'black'"></fa-surface>
     </fa-modifier>
     <fa-grid-layout fa-options="{dimensions: [3,1]}">
-        <fa-surface>
+        <fa-surface fa-pipe-to="vm.eventHandler">
             <div class="text-center-40">Photo</div>
         </fa-surface>
-        <fa-surface>
+        <fa-surface fa-pipe-to="vm.eventHandler">
             <div class="text-center-40 border-bottom">Albums</div>
         </fa-surface>
-        <fa-surface>
+        <fa-surface fa-pipe-to="vm.eventHandler">
             <div class="text-center-40">Groups</div>
         </fa-surface>
     </fa-grid-layout>
