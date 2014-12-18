@@ -208,7 +208,7 @@ console.log(res);
 ```html
 <body>
 <h1>Browserify works</h1>
-<script scr="bundle.js"></script>
+<script src="bundle.js"></script>
 </body>
 ```
 * split the screen and display the html
