@@ -192,7 +192,7 @@ While this is installing demonstrate how browserify works
 * `touch foo.js`
 ```javascript
 exports.magic=function(value){
-return 2*value;
+    return 2*value;
 };
 ```
 * `touch index.js`
@@ -222,8 +222,8 @@ document.body.appendChild(node);
 ```javascript
 var gamma=require('gamma');
 exports.magic=function(value){
-return gamma(value);
-}
+    return gamma(value);
+};
 ```
 * terminal : `npm install gamma`
 * `browserify index.js -o bundle.js`
@@ -233,8 +233,8 @@ return gamma(value);
 * `touch main.css`
 ```css
 body {
-background-color:red;
-color:white;
+    background-color:red;
+    color:white;
 }
 ```
 * go back to index.js and add first line:
