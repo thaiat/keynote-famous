@@ -739,17 +739,6 @@ Install ProgressBar.js
 npm install --save progressbar.js shifty
 ```
 
-```js
-"progressbar": "./bower_components/progressbar.js/dist/progressbar.js"
-
-// and 
-
-"progressbar": {
-            "exports": "ProgressBar"
-        },
-
-
-```
 home.html before photo Profile image modifier
 ```html
 <!-- PROFILE CIRCLE -->
