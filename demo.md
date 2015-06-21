@@ -21,7 +21,7 @@ Lets see how you install it :
 
 * open new project `famous-flickr-1`
 * `nvm install 0.10.30`
-* `npm install -g generator-angular-famous-ionic`
+* `npm install -g generator-mcfly`
 
 While this is installing demonstrate how browserify works
 
@@ -83,7 +83,7 @@ body {
 
 
 come back to installed project famous-flickr-2
-* `yo angular-famous-ionic`
+* `yo mcfly`
 * bash ./startup.sh 
 * bash ./bin/prepublish.sh
 * autosave false
@@ -108,10 +108,10 @@ run gulp karma
 
 
 
-* install module `yo angular-famous-ionic:module common`
-* install service photos `yo angular-famous-ionic:service common photos`
-* install famous helper `yo angular-famous-ionic:service common famousHelper`
-* install controller home `yo angular-famous-ionic:controller common home`
+* install module `yo mcfly:module common`
+* install service photos `yo mcfly:service common photos`
+* install famous helper `yo mcfly:service common famousHelper`
+* install controller home `yo mcfly:controller common home`
 * modify head of index.html
 ```html
     <head>
